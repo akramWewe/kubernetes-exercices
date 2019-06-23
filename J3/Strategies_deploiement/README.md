@@ -42,5 +42,5 @@ kubectl rollout status deployment kdemo-dep
 ## Suppression du service 
 kubectl delete services kdemo-svc
 
-##  Suppression du déploolent
+##  Suppression du deployment
 kubectl delete -f Strategies_deploiement/deployment-v1.1.yaml
