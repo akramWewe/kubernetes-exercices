@@ -1,3 +1,5 @@
+gcloud compute disks create --size=200GB --zone=europe-west1-b gce-training-disk
+
 # Persistent Volume:
 
 kind: PersistentVolumeClaim
