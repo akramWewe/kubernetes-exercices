@@ -33,7 +33,7 @@ echo Hello shell demo > /usr/share/nginx/html/index.html
 
 # Install Curl
 apt-get update
-apt-get install curl
+apt-get install -Y curl
 
 # Test nginx and hello page
 curl localhost
