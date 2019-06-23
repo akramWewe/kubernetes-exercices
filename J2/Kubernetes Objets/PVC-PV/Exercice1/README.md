@@ -1,4 +1,4 @@
-# CREATE A PV
+# Persistent Volume:
 
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -13,11 +13,14 @@ spec:
       storage: 3Gi
 
 
-# View information about the PersistentVolume:
+# Creation du PV
+kubectl apply -f pv-volume.yaml
+
+# Avoir les informations concernant les PersistentVolume:
 
 kubectl get pv task-pv-volume
 
-# Create a PersistentVolumeClaim
+# Persistent Volume Claim
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -30,10 +33,12 @@ spec:
     requests:
       storage: 3Gi
 
-#Look again at the PersistentVolume: // What's the difference ?
+kubectl apply -f pv-claim.yaml
+
+#Voir de nouveau au the PersistentVolume: // Une difference ?
 kubectl get pv task-pv-volume
 
-#create a Pod that uses your PersistentVolumeClaim as a volume.
+#Creation d'un Pod utilisant le Persistent Volument Claim
 
 kind: Pod
 apiVersion: v1
@@ -55,7 +60,7 @@ spec:
           name: task-pv-storage
 
 
-kubectl apply -f pv-pod.yaml --validate=false
+kubectl apply -f pv-pod.yaml
 
 # Get a shell to the Container running in your Pod:
 
