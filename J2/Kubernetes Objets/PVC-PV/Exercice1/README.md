@@ -1,44 +1,24 @@
-gcloud compute disks create --size=200GB --zone=europe-west1-b gce-training-disk
 
-# Persistent Volume:
-
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: task-pv-claim
-spec:
-  storageClassName: manual
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 3Gi
-
-
-# Creation du PV
-kubectl apply -f pv-volume.yaml
-
-# Avoir les informations concernant les PersistentVolume:
-
-kubectl get pv task-pv-volume
+# Voir le StorageClass
+kubectl get storageClass
+kubectl describle storageClass [name storageClass]
 
 # Persistent Volume Claim
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
   name: task-pv-claim
 spec:
-  storageClassName: manual
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 3Gi
+      storage: 2Gi
 
 kubectl apply -f pv-claim.yaml
 
-#Voir de nouveau au the PersistentVolume: // Une difference ?
-kubectl get pv task-pv-volume
+#Voir le PV créer automatiquement
+kubectl get pv
 
 #Creation d'un Pod utilisant le Persistent Volument Claim
 
@@ -63,21 +43,6 @@ spec:
 
 
 kubectl apply -f pv-pod.yaml
-
-# Get a shell to the Container running in your Pod:
-
-kubectl exec -it task-pv-pod -- /bin/bash
-
-# Install curl and vim
-apt-get update
-apt-get install curl vim
-curl localhost
-
-# Add an index.html with "Hello TRAINING" in /usr/share/nginx/html.
-curl localhost
-
-## delete and restart po
-index.html will be deleted ?
 
 
 
