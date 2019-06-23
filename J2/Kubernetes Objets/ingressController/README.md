@@ -18,3 +18,9 @@ kubectl get ingress basic-ingress
 
 kubectl run web2 --image=gcr.io/google-samples/hello-app:2.0 --port=8080
 kubectl expose deployment web2 --target-port=8080 --type=NodePort
+
+# Nettoyage
+kubectl delete ingress basic-ingress
+kubectl delete ingress fanout-ingress
+kubectl delete deployment web,web2
+kubectl delete service web,web2
