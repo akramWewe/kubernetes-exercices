@@ -22,5 +22,5 @@ kubectl expose deployment web2 --target-port=8080 --type=NodePort
 # Nettoyage
 kubectl delete ingress basic-ingress
 kubectl delete ingress fanout-ingress
-kubectl delete deployment web,web2
-kubectl delete service web,web2
+kubectl delete deployment web web2
+kubectl delete service web web2

@@ -50,5 +50,9 @@ kubectl exec -it task-pv-pod bash
 # Création d'un index.html dans /usr/share/nginx/html  + Supprimer le pod + Recréer Le pod
 Véfier que index.html existe encore.
 
+# Nettoyage
+kubectl delete pvc task-pv-claim
+kubectl delete kubectl delete po task-pv-pod
+
 
 
