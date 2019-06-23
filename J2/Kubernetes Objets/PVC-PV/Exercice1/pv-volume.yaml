@@ -1,12 +1,14 @@
-kind: PersistentVolume
 apiVersion: v1
+kind: PersistentVolume
 metadata:
-  name: task-pv-volume
+  name: nfs-pv
   labels:
-    type: local
+    app: training-pv-pvc
 spec:
-  storageClassName: manual
   capacity:
-    storage: 10Gi
+    storage: 2Gi
   accessModes:
     - ReadWriteOnce
+  gcePersistentDisk:
+    pdName: gce-training-disk
+    fsType: ext4
