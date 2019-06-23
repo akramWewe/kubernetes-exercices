@@ -44,5 +44,11 @@ spec:
 
 kubectl apply -f pv-pod.yaml
 
+# Vérifier le contenu /usr/share/nginx/html dans le pod 
+kubectl exec -it task-pv-pod bash
+
+# Création d'un index.html dans /usr/share/nginx/html  + Supprimer le pod + Recréer Le pod
+Véfier que index.html existe encore.
+
 
 
