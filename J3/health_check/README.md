@@ -20,7 +20,7 @@ kubectl apply -f health_check/broken-deployment.yaml
 
 
 ### Qu'est ce qui s'affit en warning ?
-
+kubectl get event
 
 ### Raffraichis la webapp 
 Toujours "version 1.0 qui s'affiche" 
