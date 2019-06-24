@@ -93,6 +93,11 @@ mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e 'show databases;'
 mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "SHOW VARIABLES LIKE 'max_allowed_packet';"
 
 
+# Nettoyage
+
+kubectl delete deployment mariadb-deployment
+kubectl delete cm mariadb-config
+kubectl delete secret mariadb-root-password mariadb-user-creds
 
 
 
