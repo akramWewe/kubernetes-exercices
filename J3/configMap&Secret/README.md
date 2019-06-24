@@ -13,7 +13,7 @@ $ kubectl get secret mariadb-root-password -o jsonpath='{.data.password}'
 # Creation secret pour le user ( Deuxieme méthode de creation de secret)
 $ kubectl create secret generic mariadb-user-creds \
       --from-literal=MYSQL_USER=kubeuser\
-      --from-literal=MYSQL_PASSWORD=kube-still-rocks
+      --from-literal=MYSQL_PASSWORD=KubernetesTraining
 
 # Vérifiez  que tout est bien créer
 
