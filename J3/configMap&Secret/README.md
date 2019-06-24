@@ -25,7 +25,7 @@ $ kubectl get configmap mariadb-config
 
 # Editer la configMap pour changer la valeur max_allowed_packet à 32M
 # Consulter le contenur du ConfigMap
-$ kubectl get configmap mariadb-config -o "jsonpath={.data['max_allowed_packet\.cnf']}"
+$ kubectl get configmap mariadb-config -o yaml
 
 # Utilisation du secret et configMap
 # Rajouter les deux secret au Deployment comme variable d'environnement:
@@ -89,7 +89,7 @@ kubectl exec -it mariadb-deployment-5465c6655c-7jfqm cat /etc/mysql/conf.d/max_a
 # Verification du fonctionnement
 kubectl exec -it [pod-id] bin/sh
 
-mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e 'show databases;
+mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e 'show databases;'
 mysql -uroot -p${MYSQL_ROOT_PASSWORD} -e "SHOW VARIABLES LIKE 'max_allowed_packet';"
 
 
