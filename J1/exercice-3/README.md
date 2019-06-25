@@ -8,7 +8,7 @@ Pour cela, nous mettons à votre disposition un fichier `docker-compose.yml` à 
 
 Une fois votre `docker-compose.yml` finalisé, vous pouvez lancer la commande suivante pour démarrer tous les services :
 ```
-docker-compose up
+docker-compose up -d
 ```
 
 Pour vérifier que votre application web NodeJS est bien démarrée, consulter la page à l'adresse suivante : [http://localhost:8000](http://localhost:8000). Pour constater que le chat est bien fonctionnel, afficher cette page dans 2 navigateurs différents et saisir quelques phrases dans la partie basse de l'écran.
