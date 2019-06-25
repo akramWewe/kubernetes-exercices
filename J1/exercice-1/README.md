@@ -15,7 +15,7 @@ L'ojectif de cette étape est de lancer les deux conteneurs et de les connecter 
 
 * Construction de l'image :
 ```
-  docker build -t dijon/nodeapp .
+  docker build -t myrepo/nodeapp .
 ```
 
 * Démarrage du conteneur de l'application sur le port 8000
