@@ -1,4 +1,4 @@
-## Exercice n°1 : C'était mieux avant
+## Exercice n°1
 
 L'application utilisée pour ce permier exercice est une page web NodeJS qui mémorise le nombre d'affichages dans une base de données Redis.
 
