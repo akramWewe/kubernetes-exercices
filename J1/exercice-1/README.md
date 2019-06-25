@@ -23,4 +23,4 @@ L'ojectif de cette étape est de lancer les deux conteneurs et de les connecter 
   docker run -d --name nodeapp ##OptionPourLierCeConteneurARedis## ##OptionPourMapperLePortDuConteneur## dijon/nodeapp
 ```
 
-Pour tester si votre application web NodeJS est bien connectée à Redis, vous pouvez consulter la page à l'adresse suivante : [http://[IB BASTION]:8000](http://localhost:8000)
+Pour tester si votre application web NodeJS est bien connectée à Redis, vous pouvez consulter la page à l'adresse suivante : [http://[IP BASTION]:8000](http://localhost:8000)
