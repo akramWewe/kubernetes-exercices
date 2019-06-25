@@ -10,7 +10,7 @@ Il faudra indiquer pour le service web relatif à notre application NodeJS, de c
 
 Une fois votre docker-compose.yml finalisé, vous pouvez lancer la commande suivante pour démarrer tous les services :
 ```
-docker-compose up
+docker-compose up -d
 ```
 
 
