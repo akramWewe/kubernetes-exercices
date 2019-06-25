@@ -1,6 +1,6 @@
 FROM node:4
 
-MAINTAINER Rémy Méja <remy.meja@inist.fr>
+MAINTAINER Akram BLOUZA <akram.blouza@wescale.fr>
 MAINTAINER Claude Niederlender <claude.niederlender@inist.fr>
 
 RUN mkdir -p /usr/src/my-app
