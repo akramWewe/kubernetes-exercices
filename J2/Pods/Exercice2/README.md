@@ -6,16 +6,22 @@ The purpose of identifying the production type is to not accidentally deploy pod
 ## Taint one of the worker nodes to repel work.
 
 # Get list nodes
+```
 kubectl get node
+```
 # Choose one node and taint it
+```
 kubectl taint node <node_name> node-type=prod:NoSchedule
+```
 
 # Verify the taint is ok 
+```
 kubectl describe nodes <node_name>
-
+```
 ## Schedule a pod to the dev environment.
 
 # Create a yaml file containing the pod spec 
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -32,15 +38,19 @@ spec:
    operator: Equal
    value: dev
    effect: NoSchedule
+```
 
 # Create the pod
+```
 kubectl create -f dev-pod-busybox.yml
-
+```
 # Verify
+```
 kubectl get pod -o wide
-
+```
 ## Allow a pod to be scheduled to the prod environment.
 # Create a yaml file containing the pod spec 
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -60,13 +70,18 @@ spec:
        operator: Equal
        value: prod
        effect: NoSchedule
+```
 
 ## Create a yaml file containing the pod spec 
+```
 kubectl create -f prod-deployment.yaml
-
+```
 ## Verify each pod has been scheduled and verify the toleration.
+```
 kubectl get pods -o wide
 kubectl get pods <pod_name> -o yaml
-
+```
 ## Remove Taint
+```
 kubectl taint nodes <node_name> node-type-
+```
