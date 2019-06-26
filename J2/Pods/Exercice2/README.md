@@ -20,7 +20,7 @@ kubectl describe nodes <node_name>
 ```
 ## Schedule a pod to the dev environment.
 
-# Create a yaml file containing the pod spec 
+# Create a yaml file containing the pod spec and a DEV Taint Tolerance
 ```
 apiVersion: v1
 kind: Pod
@@ -49,7 +49,7 @@ kubectl create -f dev-pod-busybox.yml
 kubectl get pod -o wide
 ```
 ## Allow a pod to be scheduled to the prod environment.
-# Create a yaml file containing the pod spec 
+# Create a yaml file containing the pod spec and a Production Taint Tolerance
 ```
 apiVersion: v1
 kind: Pod
