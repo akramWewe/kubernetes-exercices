@@ -18,7 +18,7 @@ spec:
     - containerPort: 80
 ```
 
-# Création d'un pod.
+# Créer un pod à partir de ce fichier yaml du pod
 ```
 kubectl create -f nginx.yml
 ```
@@ -29,19 +29,19 @@ kubectl create -f nginx.yml
 kubectl get pods
 ```
 
-# Se mettre au niveau du conteneur nginx:
+# Positionnez vous au niveau du conteneur nginx:
 
 ```
 kubectl exec -it nginx -- /bin/bash
 ```
 
-# Au niveau du shell, lister les dossiers au niveau du dossier root:
+# Lister les dossiers au niveau du dossier root:
 
 ```
 ls -l
 ```
 
-# Créer un fichier.html contenant un texte "Hello shell demo" et le copier au niveau du /usr/share/nginx/html/
+# Créer un fichier.html contenant un texte "Hello shell demo" et le copier le au niveau du /usr/share/nginx/html/
 
 ```
 echo Hello shell demo > /usr/share/nginx/html/index.html
