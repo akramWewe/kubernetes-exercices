@@ -74,7 +74,7 @@ spec:
 
 ## Create a yaml file containing the pod spec 
 ```
-kubectl create -f prod-deployment.yaml
+kubectl create -f prod-deployment.yml
 ```
 ## Verify each pod has been scheduled and verify the toleration.
 ```
