@@ -45,6 +45,8 @@ spec:
 kubectl get service my-cip-service --output yaml
 ```
 # Accéder au service
-```
-curl [CLUSTER_IP]:80
-```
+- Essayer d'accéder au service: [CLUSTER_IP]:80. Ceci ne répond pas, pourquoi ? Comment faire pour accéder au Service ?
+- Accéder à l'un des pods:
+kubectl exec -it  my-deployment-7bc95fb476-q75rz /bin/sh
+- Installer curl : apk add --no-cache curl
+- Faire un curl sur [CLUSTER_IP]:80
