@@ -12,11 +12,11 @@ kubectl get service web
 ```
 kubectl apply -f basic-ingress.yaml
 ```
-# Accéder à l'application
+# Accéder à l'application (Ceci prend du temps ... faut patienter)
 ```
 kubectl get ingress basic-ingress
 ```
-# Servir plusieurs applications sur un équilibreur de charge 
+# Servir plusieurs applications sur un équilibreur de charge  (Ceci prend du temps ... faut patienter)
 ```
 kubectl run web2 --image=gcr.io/google-samples/hello-app:2.0 --port=8080
 kubectl expose deployment web2 --target-port=8080 --type=NodePort
