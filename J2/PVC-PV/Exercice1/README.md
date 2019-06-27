@@ -2,7 +2,7 @@
 # Voir les StorageClass présents:
 ```
 kubectl get storageClass
-kubectl describle storageClass [name storageClass]
+kubectl describe storageClass [name storageClass]
 ```
 
 # Création d'un Persistent Volume Claim pour demander un espace de stockage de 2Gi en  lecture/ecriture
