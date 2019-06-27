@@ -1,5 +1,3 @@
-admin/resource/memory-defaults-pod.yaml 
-
 apiVersion: v1
 kind: Pod
 metadata:

@@ -1,5 +1,3 @@
-admin/resource/memory-defaults.yaml 
-
 apiVersion: v1
 kind: LimitRange
 metadata:
