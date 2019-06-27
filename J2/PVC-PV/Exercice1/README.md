@@ -60,7 +60,7 @@ Véfier que index.html existe encore.
 # Nettoyage
 ```
 kubectl delete pvc task-pv-claim
-kubectl delete kubectl delete po task-pv-pod
+kubectl delete po task-pv-pod
 ```
 
 
