@@ -40,7 +40,7 @@ spec:
 
 # Vérifier la création du deployment et le service
 
-# Determinerle CLUSTER IP ( attendre un certain temps )
+# Determiner le CLUSTER IP ( attendre un certain temps )
 ```
 kubectl get service my-cip-service --output yaml
 ```
