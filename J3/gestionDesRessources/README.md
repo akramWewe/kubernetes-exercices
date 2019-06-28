@@ -23,6 +23,7 @@ spec:
 ```
 ```
 kubectl create -f limit-range-1.yaml --namespace=default-resources-config
+limitrange "default-requests-and-limits" created
 ```
 
 ## https://supergiant.io/blog/managing-memory-and-cpu-resources-for-kubernetes-namespaces/
