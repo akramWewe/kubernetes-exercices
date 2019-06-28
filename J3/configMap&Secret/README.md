@@ -18,7 +18,7 @@ $ kubectl create secret generic mariadb-user-creds \
       --from-literal=MYSQL_USER=kubeuser\
       --from-literal=MYSQL_PASSWORD=KubernetesTraining
 ```
-# Vérifiez  que tout est bien créer
+# Vérifiez  que tout est bien crée
 
 # Création de configMap
 ```
