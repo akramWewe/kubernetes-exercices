@@ -1,6 +1,6 @@
 # Déployer une application Web
 ```
-kubectl run web --generator=run-pod/v1 --image=gcr.io/google-samples/hello-app:1.0 --port=8080
+kubectl run web --image=gcr.io/google-samples/hello-app:1.0 --port=8080
 ```
 # Exposer le déploiement en tant que service en interne
 ```
