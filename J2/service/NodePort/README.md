@@ -25,7 +25,7 @@ spec:
           value: "50000"
 ```
 
-# Créer un service de type ClusterIP
+# Créer un service de type NodePort
 
 ```
 apiVersion: v1
