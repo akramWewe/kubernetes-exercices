@@ -1,4 +1,4 @@
-1. Création d'un service CLUSTERIP: 
+1. Création d'un service CLUSTERIP
 2. Création d'un service NodePort
 3. Création d'un service LoadBalancer
 4. Néttoyage de l'ensemble: 
