@@ -64,6 +64,9 @@ kubectl apply -f hello-v2.yml
 ```
 kubectl scale deployment hello-dep --replicas=3
 ```
+
+# Qu'est ce que vous remarquez ? 
+    
 # nettoyage de l'ensemble:
 ```
 kubectl delete po,deployment,hpa --all
