@@ -11,7 +11,6 @@ spec:
   selector:
     matchLabels:
       app: hello-dep 
-deployment
   template:
     metadata:
       labels:
@@ -41,7 +40,6 @@ spec:
   selector:
     matchLabels:
       app: hello-dep 
-deployment
   template:
     metadata:
       labels:
@@ -64,9 +62,6 @@ kubectl apply -f hello-v2.yml
 ```
 kubectl scale deployment hello-dep --replicas=3
 ```
-
-# Qu'est ce que vous remarquez ? 
-    
 # nettoyage de l'ensemble:
 ```
 kubectl delete po,deployment,hpa --all
